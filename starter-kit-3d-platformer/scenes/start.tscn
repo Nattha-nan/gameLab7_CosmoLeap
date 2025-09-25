@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://boc43ra17ji7x"]
+
+[ext_resource type="Script" uid="uid://boltc03sermpm" path="res://scripts/start.gd" id="1_bodal"]
+[ext_resource type="Texture2D" uid="uid://bdeh86aicqoqv" path="res://FromMe/Space.png" id="1_u80x2"]
+[ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="2_bodal"]
+[ext_resource type="FontFile" uid="uid://dp6pphipenf6r" path="res://fonts/THSarabun Bold.ttf" id="4_kdmts"]
+
+[node name="start" type="Node2D"]
+script = ExtResource("1_bodal")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -6.0
+offset_top = -7.0
+offset_right = 1530.0
+offset_bottom = 1017.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_u80x2")
+
+[node name="name" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 227.0
+offset_top = 46.0
+offset_right = -523.0
+offset_bottom = 161.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_bodal")
+theme_override_font_sizes/font_size = 100
+text = "Cosmo Leap"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -255.0
+offset_top = -108.0
+offset_right = -51.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_bodal")
+theme_override_font_sizes/font_size = 90
+text = "Start"
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 21.0
+offset_right = 238.0
+offset_bottom = 92.0
+theme_override_fonts/font = ExtResource("4_kdmts")
+theme_override_font_sizes/font_size = 30
+text = "นางสาวณัฐนันทน์ บุษดี 
+673380037-1 section 1"
+
+[connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]
